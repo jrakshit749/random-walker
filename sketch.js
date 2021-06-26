@@ -1,14 +1,16 @@
+  
 const SCALE = 2
-let fr = 10;
+let fr = 5;
 let pointsx = [];
 let pointsy = [];
+
 
 function setup() {
   let RANDOM_SIZE = floor(random(4,10));
   pointsx[0] += RANDOM_SIZE;
   pointsy[0] += RANDOM_SIZE;
 
-  createCanvas(400*SCALE, 400*SCALE);
+  createCanvas(960*SCALE, 473.5*SCALE);
   x = random(100*SCALE,399*SCALE);
   y = random(100*SCALE, 399*SCALE)*SCALE;
   background(51);  
@@ -17,15 +19,24 @@ function setup() {
     pointsy[i] = floor(random(50, 350*SCALE));
 
   }
+  
 }
 
 function draw() {
   frameRate(fr);
-  stroke(floor(random(100,256)), floor(random(100,256)), floor(random(100,256)));
   strokeWeight(10);
+
+  let strokes = [10];
+  for(let i=0; i<10; i++){
+    // strokes[i] = stroke(floor(random(10,256)), floor(random(10,256)), floor(random(10,256)));
+    strokes[i] = [floor(random(100,250)),floor(random(100,250)),floor(random(100,250))];
+  console.log(strokes[i])
+    
+  }
+
   for (let i = 0; i < 6; i++) {
-    point(pointsx[i],pointsy[i]);
-  
+    point(pointsx[i], pointsy[i]).stroke(strokes[i]);
+    
   var r = floor(random(4));
 
   switch(r){
