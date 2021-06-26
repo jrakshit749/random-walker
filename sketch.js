@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   
 const SCALE = 2
 let fr = 5;
@@ -57,3 +58,12 @@ function draw() {
   constrain(x, 1, 400*SCALE);
   constrain(y, 1, 400*SCALE);
 }
+=======
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}
+>>>>>>> parent of 6e527f7 (Completed the Random Walker project)

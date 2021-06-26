@@ -1,12 +1,12 @@
 html, body {
   margin: 0;
   padding: 0;
-  display: grid;
-  place-items: center;
 }
 
 canvas {
   display: block;
+<<<<<<< HEAD
   border-radius: 10px;
+=======
+>>>>>>> parent of 6e527f7 (Completed the Random Walker project)
 }
-
